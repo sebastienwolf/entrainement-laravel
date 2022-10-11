@@ -4,6 +4,9 @@
         <a href="/posts/{{$post->slug;}}">   
         {{ $post->title;}} 
     </a>
+<p>
+    <a href="#">{{ $post->category->name }}</a>
+</p>
 
     <div>
     {{$post->exerpt;}}
