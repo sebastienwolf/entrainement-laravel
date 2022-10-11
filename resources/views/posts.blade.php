@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-
-<title>my blog</title>
-<link rel="stylesheet" href="/css/app.css">
-
-<body>
+<x-layout>
     @foreach ($posts as $post)
     <article>
         <a href="/posts/{{$post->slug;}}">   
@@ -17,4 +12,30 @@
 
     </article>
     @endforeach
-</body>
+</x-layout>
+
+
+{{-- 
+
+@extends('layout')
+
+@section('banner')
+<h1> My banner</h1>
+@endsection
+
+@section('content')
+@foreach ($posts as $post)
+    <article>
+        <a href="/posts/{{$post->slug;}}">   
+        {{ $post->title;}} 
+    </a>
+
+    <div>
+    {{$post->exerpt;}}
+    </div>
+        
+
+    </article>
+    @endforeach
+
+@endsection --}}
