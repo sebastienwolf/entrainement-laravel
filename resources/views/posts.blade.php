@@ -1,7 +1,7 @@
 <x-layout>
     @foreach ($posts as $post)
     <article>
-        <a href="/posts/{{$post->id;}}">   
+        <a href="/posts/{{$post->slug;}}">   
         {{ $post->title;}} 
     </a>
 
