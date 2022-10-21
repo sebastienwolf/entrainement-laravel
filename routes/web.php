@@ -62,3 +62,10 @@ Route::get('category/{category:slug}', function(Category $category){
         ]);
 
 });
+
+Route::get('toto/{toto:slug}', function(Category $toto){
+    return view('posts', [
+        'posts' => $toto->posts
+    ]);
+
+});
