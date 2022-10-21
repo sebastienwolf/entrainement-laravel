@@ -54,5 +54,11 @@ Route::get('category/{category:slug}', function(Category $category){
     return view('posts', [
         'posts' => $category->posts
     ]);
+});
+
+    Route::get('tata/{tata:slug}', function(Category $tata){
+        return view('posts', [
+            'posts' => $tata->posts
+        ]);
 
 });
